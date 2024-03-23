@@ -52,7 +52,7 @@ class Tree {
     // hasNode method checks if a node with a given value exists in the tree
     hasNode(data) {
         // current is the starting point for the search
-        current = this.root;
+        let current = this.root;
         // if current is null, the tree is empty, so return false
         if (current === null) {
             return false;
@@ -71,3 +71,19 @@ class Tree {
         }
     }
 }
+
+// Example usage:
+// const tree = new Tree();
+// tree.addNode(new Node(5));
+// tree.addNode(new Node(3));
+// tree.addNode(new Node(7));
+// tree.addNode(new Node(2));
+// tree.addNode(new Node(4));
+// tree.addNode(new Node(6));
+
+// console.log(tree.hasNode(5)); // true
+// console.log(tree.hasNode(8)); // false
+// console.log(tree.hasNode(2)); // true
+// console.log(tree.hasNode(10)); // false
+// console.log(tree.hasNode(4)); // true
+// console.log(tree.hasNode(1)); // false
