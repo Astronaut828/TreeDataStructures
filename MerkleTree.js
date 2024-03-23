@@ -38,7 +38,6 @@ Some tree vocabulary to keep in mind:
 7. Descendant - A node that is on the path from another node to the root in the tree (e.g. the leaves are descendants of the root).
 */
 
-
 class MerkleTree {
     constructor(leaves, concat) {
         // Store the initial set of leaves
@@ -119,3 +118,16 @@ function verifyProof(proof, node, root, concat) {
     // After reconstructing the path from the node to the root, check if the final result matches the given root
     return data === root;
 }
+
+// // Example usage of the MerkleTree class
+// const tree1 = new MerkleTree(["A", "B"], (a, b) => a + b);
+// console.log(tree1.getRoot()); // Expected output: 'AB'
+
+// const tree2 = new MerkleTree(["A", "B", "C"], (a, b) => a + b);
+// console.log(tree2.getRoot()); // Expected output: 'ABC'
+
+// const tree3 = new MerkleTree(["A", "B", "C", "D"], (a, b) => a + b);
+// console.log(tree3.getRoot()); // Expected output: 'ABCD'
+
+// const tree4 = new MerkleTree(["A", "B", "C", "D", "E"], (a, b) => a + b);
+// console.log(tree4.getRoot()); // Expected output: 'ABCDE'
