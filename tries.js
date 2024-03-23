@@ -68,3 +68,23 @@ class Trie {
         return node.isWord; // Return true if the last character is marked as the end of a word
     }
 }
+
+
+// Example usage:
+// const trie = new Trie();
+
+// // Test inserting words into the trie
+// trie.insert("hello");
+// trie.insert("world");
+// trie.insert("how");
+// trie.insert("are");
+// trie.insert("you");
+
+// // Test checking if words are in the trie
+// console.log(trie.contains("hello")); // Output: true
+// console.log(trie.contains("world")); // Output: true
+// console.log(trie.contains("how")); // Output: true
+// console.log(trie.contains("are")); // Output: true
+// console.log(trie.contains("you")); // Output: true
+// console.log(trie.contains("hi")); // Output: false
+// console.log(trie.contains("there")); // Output: false
